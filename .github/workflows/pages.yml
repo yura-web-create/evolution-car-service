@@ -25,11 +25,11 @@ jobs:
         with:
           python-version: '3.12'
 
+      # Pages включаются один раз в Settings -> Pages -> Source: GitHub Actions.
+      # Отсюда включить нельзя: у токена Actions нет права создавать сайт.
       - name: Configure Pages
         id: pages
         uses: actions/configure-pages@v5
-        with:
-          enablement: true
 
       # Сайт собирается под тот адрес, по которому он реально откроется.
       # Индексация намеренно закрыта: служебный адрес не должен попадать в поиск.
